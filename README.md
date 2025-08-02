@@ -1,6 +1,8 @@
 # Real-ESRGAN
 PyTorch implementation of a Real-ESRGAN model trained on custom dataset. This model shows better results on faces compared to the original version. It is also easier to integrate this model into your projects.
 
+> This is a forked version that has been patched to work with newer versions of Hugging Face Hub (v0.34.3+). The original deprecated `cached_download` API has been replaced with the modern `hf_hub_download` API.
+
 > This is not an official implementation. We partially use code from the [original repository](https://github.com/xinntao/Real-ESRGAN)
 
 Real-ESRGAN is an upgraded [ESRGAN](https://arxiv.org/abs/1809.00219) trained with pure synthetic data is capable of enhancing details while removing annoying artifacts for common real-world images. 
@@ -14,8 +16,13 @@ You can try it in [google colab](https://colab.research.google.com/drive/1YlWt--
 ### Installation
 
 ```bash
-pip install git+https://github.com/sberbank-ai/Real-ESRGAN.git
+pip install git+https://github.com/frankjoshua/Real-ESRGAN.git
 ```
+
+**Requirements:**
+- Python 3.7+
+- PyTorch >= 1.7
+- huggingface-hub >= 0.34.3 (patched for compatibility)
 
 ### Usage
 
